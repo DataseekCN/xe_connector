@@ -16,10 +16,13 @@
                             ├──config               # Configuration class(eg: SwaggerConfig.java)
                             ├──controller           # REST controller classes
                             ├──dataobject           # Entity classes
+                            ├──dto                  # Data transfer object
                             ├──enums                # Enum types
                             ├──exceptions           # Customized exceptions
                             ├──repository           # DAO classes
                             ├──service              # Service classes
                                 ├──implementation   # Concrete service classes
+                            ├──utils                # Utility classes
+                            ├──vo                   # View object
             ├──resources                            # Configuration files
         ├──test                                     # Unit tests
