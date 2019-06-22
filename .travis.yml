@@ -1,5 +1,39 @@
 language: java
 jdk: oraclejdk8
+os:linux
+dist: xenial
+
+# install mysql 5.7 on ubuntu distribution
+addons:
+  apt:
+    sources:
+      - mysql-5.7-trusty
+    packages:
+      - mysql-server
+      - mysql-client
+
+services:
+  - mysql
+
+before_install:
+  # reset root password of mysql
+  - sudo mysql -e "use mysql; update user set authentication_string=PASSWORD('1234') where User='root'; update user set plugin='mysql_native_password';FLUSH PRIVILEGES;"
+  - sudo mysql_upgrade -u root -p1234
+  - sudo service mysql restart
+
+  # create test database
+  - mysql -e 'CREATE DATABASE IF NOT EXIST company;'
+  - mysql -e 'CREATE TABLE `employee_info` (
+    `employee_id` int not null auto_increment,
+    `employee_name` varchar(64) not null comment '员工名称',
+    `gender` int not null comment '员工性别',
+    `role` varchar(64) not null comment '员工职位',
+    `location` varchar(64) comment '地理位置',
+    `create_time` timestamp not null default current_timestamp comment '创建时间',
+    `update_time` timestamp not null default current_timestamp on update current_timestamp comment '修改时间',
+    primary key (`employee_id`)
+    );'
+
 
 notifications:
   webhooks: https://oapi.dingtalk.com/robot/send?access_token=6cc2dea97fc347373b8bb2311ce8ba7eb433fa9dd0dc3d6616282749c736921a
