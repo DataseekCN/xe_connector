@@ -6,7 +6,7 @@ services:
 
 before_install:
   # create test database
-  - mysql -e 'CREATE company IF NOT EXIST;'
+  - mysql -e 'CREATE DATABASE IF NOT EXISTS company;'
   - mysql -e 'use company;'
   - mysql -e 'CREATE TABLE `employee_info` (
     `employee_id` int not null auto_increment,
