@@ -1,5 +1,6 @@
 # Create DB
 CREATE DATABASE IF NOT EXISTS `company`;
+GRANT ALL PRIVILEGES ON company.* TO 'travis'@'%';
 USE `company`;
 
 # Create table
