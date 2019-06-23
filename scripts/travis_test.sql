@@ -1,5 +1,5 @@
 # Create DB
-CREATE DATABASE IF NOT EXISTS `company` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE IF NOT EXISTS `company`;
 USE `company`;
 
 # Create table

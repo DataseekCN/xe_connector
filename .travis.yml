@@ -5,6 +5,6 @@ services:
   - mysql
 
 before_install:
-  - mysql -u -root --password="" < scripts/travis_test.sql
+  - mysql -e < scripts/travis_test.sql
 notifications:
   webhooks: https://oapi.dingtalk.com/robot/send?access_token=6cc2dea97fc347373b8bb2311ce8ba7eb433fa9dd0dc3d6616282749c736921a
