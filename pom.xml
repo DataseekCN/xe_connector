@@ -6,7 +6,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.1.5.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository  -->
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>info.dataseek</groupId>
     <artifactId>xe_connector</artifactId>
@@ -28,20 +28,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-            <exclusions>
-              <exclusion>
-                 <groupId>com.vaadin.external.google</groupId>
-                 <artifactId>android-json</artifactId>
-              </exclusion>
-              <exclusion>
-                 <groupId>net.minidev</groupId>
-                 <artifactId>json-smart</artifactId>
-              </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
+            <version>4.12</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
@@ -75,15 +66,19 @@
             <version>2.9.2</version>
         </dependency>
         <dependency>
-	      <groupId>org.apache.httpcomponents</groupId>
-	      <artifactId>httpclient</artifactId>
-	      <version>4.5.6</version>
-	    </dependency>
-	    
-	    <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+            <version>4.4.11</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.6</version>
+        </dependency>
+        <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.31</version>
+            <version>1.2.41</version>
         </dependency>
     </dependencies>
 
