@@ -23,7 +23,7 @@ public class EmployeeServiceImplTest {
     @Test
     @Transactional
     public void createTest() {
-        EmployeeInfo record = new EmployeeInfo("新人",0,"Cleaner", "Africa");
+        EmployeeInfo record = new EmployeeInfo("John Doe",0,"Cleaner", "Africa");
         EmployeeInfo result = employeeService.save(record);
         Assert.assertNotNull(result);
     }

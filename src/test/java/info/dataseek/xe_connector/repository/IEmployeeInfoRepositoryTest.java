@@ -22,7 +22,7 @@ public class IEmployeeInfoRepositoryTest {
     @Test
     @Transactional
     public void createTest() {
-        EmployeeInfo newRecord = new EmployeeInfo("新人", 1, "Junior Developer", "China");
+        EmployeeInfo newRecord = new EmployeeInfo("John Doe", 1, "Junior Developer", "China");
         EmployeeInfo result = repository.save(newRecord);
         Assert.assertNotNull(result);
     }
