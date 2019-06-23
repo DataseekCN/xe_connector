@@ -11,5 +11,5 @@ CREATE TABLE `employee_info` (
     `location` VARCHAR(64) COMMENT '地理位置',
     `create_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
     `update_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
-    PRIMARY_KEY (`employee_id`)
+    PRIMARY KEY (`employee_id`)
 );
