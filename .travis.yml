@@ -13,6 +13,7 @@ services:
   - mysql
 
 before_install:
+  - sudo mysql_upgrade -u travis
   - mysql < scripts/travis_test.sql
 
 
