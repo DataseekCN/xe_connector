@@ -9,7 +9,7 @@ CREATE TABLE `employee_info` (
     `gender` INT NOT NULL COMMENT '员工性别',
     `role` VARCHAR(64) NOT NULL COMMENT '员工职位',
     `location` VARCHAR(64) COMMENT '地理位置',
-    `create_time` TIMESTAMP NOT NULL DEFAULT COMMENT '创建时间',
+    `create_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
     `update_time` TIMESTAMP NOT NULL DEFAULT ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
     PRIMARY_KEY(`employee_id`)
 );
