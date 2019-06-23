@@ -18,4 +18,4 @@ before_install:
 
 
 notifications:
-  webhooks: https://oapi.dingtalk.com/robot/send?access_token=6cc2dea97fc347373b8bb2311ce8ba7eb433fa9dd0dc3d6616282749c736921a
+  webhooks: https://oapi.dingtalk.com/robot/send?access_token=3863439bced5ebb494f43b5af3b6d0d8361bf0a6cba5d4d0cbc7026d3e3966bc
