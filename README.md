@@ -1,6 +1,7 @@
 # xe_connector
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 [![Build Status](https://travis-ci.org/DataseekCN/xe_connector.svg?branch=master)](https://travis-ci.org/DataseekCN/xe_connector)
+[![codebeat badge](https://codebeat.co/badges/ce6002d4-1a89-4d9c-a74d-317241147113)](https://codebeat.co/projects/github-com-dataseekcn-xe_connector-master)
 
 ## Project Structure
 
