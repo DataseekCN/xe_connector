@@ -1,16 +1,23 @@
 # Create DB
-CREATE DATABASE IF NOT EXISTS `company`;
-GRANT ALL PRIVILEGES ON company.* TO 'travis'@'%';
-USE `company`;
+CREATE DATABASE IF NOT EXISTS `e2x`;
+GRANT ALL PRIVILEGES ON e2x.* TO 'travis'@'%';
+USE `e2x`;
 
 # Create table
-CREATE TABLE `employee_info` (
-    `employee_id` INT NOT NULL AUTO_INCREMENT,
-    `employee_name` VARCHAR (64) NOT NULL COMMENT '员工名称',
-    `gender` INT NOT NULL COMMENT '员工性别',
-    `role` VARCHAR(64) NOT NULL COMMENT '员工职位',
-    `location` VARCHAR(64) COMMENT '地理位置',
-    `create_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
-    `update_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
-    PRIMARY KEY (`employee_id`)
+CREATE TABLE `user` (
+    `id` VARCHAR(64) NOT NULL UNIQUE COMMENT 'primary key',
+    `user_id` VARCHAR (64) NOT NULL COMMENT 'user created id',
+    `first_name` VARCHAR(64) NOT NULL COMMENT 'user first name',
+    `last_name` VARCHAR(64) NOT NULL COMMENT 'user last name',
+    `email` VARCHAR(64) NOT NULL COMMENT 'user email',
+    `contact_number` VARCHAR(64) COMMENT 'phone number',
+    `password` VARCHAR(64) COMMENT 'password',
+    `activation_status` INT NOT NULL COMMENT 'account activation status',
+    `create_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'account creation timestamp',
+    `update_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'account modification timestamp',
+    PRIMARY KEY (`id`)
 );
+
+# Add seed data into user table
+INSERT into `user` (`id`, `user_id`, `first_name`, `last_name` ,`email`, `contact_number`, `password`, `activation_status`)
+VALUES ('1561465397985191625', 'user3301','user', '3301', 'user3301@dataseek.info', '0420231234', '8EshyckhhJDDtYPrKDIiWkwSiq7E25/o','1');
