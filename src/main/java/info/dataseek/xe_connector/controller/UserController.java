@@ -7,6 +7,7 @@ import info.dataseek.xe_connector.utils.ResultVOUtil;
 import info.dataseek.xe_connector.vo.ResultVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.jasypt.encryption.StringEncryptor;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,10 +23,14 @@ public class UserController {
     @Autowired
     private IUserService userService;
 
+    @Autowired
+    private StringEncryptor stringEncryptor;
+
     @ApiOperation(value = "sign up")
     @PostMapping("/signup")
     public ResultVO<UserDTO> signUp(@RequestBody User user) {
         //TODO: need input validation?
+        user.setPassword(stringEncryptor.encrypt(user.getPassword()));
         User result = userService.save(user);
         UserDTO userDTO = new UserDTO();
         BeanUtils.copyProperties(result, userDTO);

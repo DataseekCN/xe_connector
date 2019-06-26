@@ -20,4 +20,4 @@ CREATE TABLE `user` (
 
 # Add seed data into user table
 INSERT into `user` (`id`, `user_id`, `first_name`, `last_name` ,`email`, `contact_number`, `password`, `activation_status`)
-VALUES ('1561465397985191625', 'user3301','user', '3301', 'user3301@dataseek.info', '8EshyckhhJDDtYPrKDIiWkwSiq7E25/o', '0420002000','1');
+VALUES ('1561465397985191625', 'user3301','user', '3301', 'user3301@dataseek.info', '0420231234', '8EshyckhhJDDtYPrKDIiWkwSiq7E25/o','1');
