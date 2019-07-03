@@ -64,6 +64,7 @@ public class XeroInfoController {
     		HttpEntity entity = response.getEntity();
     		String body = EntityUtils.toString(entity);
     		
+    		//返回xml解析
             Document document = DocumentHelper.parseText(body);
             Element root = document.getRootElement();
     		System.out.println("Status=" + root.elementText("Status"));
